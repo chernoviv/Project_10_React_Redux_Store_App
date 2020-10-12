@@ -10,17 +10,19 @@ import store from './store';
 
 import './index.scss';
 
+
 const restoService = new RestoService();
 
 ReactDOM.render(
-	<Provider store={store}>
-		<ErrorBoundry>
-			<RestoServiceContext.Provider value={restoService}>
-				<Router>
-					<App/>
-				</Router>
-			</RestoServiceContext.Provider>
-		</ErrorBoundry>
-	</Provider>
-	, document.getElementById('root'));
+    <Provider store={store}>
+        <ErrorBoundry>
+            <RestoServiceContext.Provider value={restoService}>
+                <Router>
+                    <App/>
+                </Router>
+            </RestoServiceContext.Provider>
+        </ErrorBoundry>
+    </Provider>
+    , document.getElementById('root')
+);
 
